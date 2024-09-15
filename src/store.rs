@@ -1,5 +1,7 @@
 use std::collections::HashMap;
 
+use serde::{Deserialize, Serialize};
+
 #[derive(Debug, Clone, serde::Deserialize, serde::Serialize)]
 pub struct Value {
     value: String,
@@ -13,12 +15,12 @@ pub struct Record {
     freq: i32,
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Recoil {
     pub freq_store: HashMap<i32, Vec<String>>,
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct DiveStore {
     pub kv_store: HashMap<String, Value>,
     //include a recoil here
