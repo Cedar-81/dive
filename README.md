@@ -25,7 +25,7 @@ To run Dive locally, follow these steps:
 1. **Clone the Repository**:
     
     ```bash
-    git clone <https://github.com/yourusername/dive.git>
+    git clone https://github.com/Cedar-81/dive
     cd dive
     
     ```
